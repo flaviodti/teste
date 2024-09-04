@@ -12,11 +12,9 @@ include("valida.php");
         <div style="width: 50%; float:left">
         <span style="padding-left: 10px;">Olá <?=$_SESSION['nome'];?></span>
         </div>
-
         <div style="width: 50%; float:left; text-align:right;">
         <span style="background-color:blue; margin-right:10px;"> <a href="sair.php"><font color="black">SAIR</font></a></span>
         </div>
-
     </div>
     <div id="menu" style="width: 200px; background-color: #f4f4f4; min-height: 400px; float: left;">
         <h2>Menu</h2>
