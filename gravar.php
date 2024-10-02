@@ -1,6 +1,6 @@
 <?php
 session_start();
-
-echo "Olá ".$_SESSION["nome"];
-
+print_r($_SESSION);
+echo "<br>";
+echo "conteúdo: ".$_SESSION["cpf"]."-".$_SESSION["senha"];
 ?>

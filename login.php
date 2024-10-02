@@ -1,8 +1,9 @@
 <?php
+
 include("conexao.php");
 
-$cpf = $_POST["cpf"];
-$senha = $_POST["senha"];
+$cpf=$_POST["cpf"];
+$senha=$_POST["senha"];
 
 $sql = "select nome from usuarios where cpf = ? and senha=? ";
 $stmt = $conn->prepare($sql);
@@ -28,3 +29,4 @@ if ($stmt) {
         die("nenhum usuário encontrado");
     }
 }
+?>
