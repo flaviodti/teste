@@ -4,7 +4,24 @@ include("valida.php");
 <html>
 <head>
     <title>Prncipal</title>
+ <script>
+    function validarSenha() {
+        senha = document.getElementById("senha").value;
+  // Verifica se a senha tem no mínimo 6 caracteres
+  if (senha.length < 6) {
+    return false;
+  }
 
+  // Expressões regulares para cada critério
+  const temNumero = /[0-9]/.test(senha); // Verifica se tem pelo menos um número
+  const temMaiuscula = /[A-Z]/.test(senha); // Verifica se tem pelo menos uma letra maiúscula
+  const temMinuscula = /[a-z]/.test(senha); // Verifica se tem pelo menos uma letra minúscula
+  const temEspecial = /[!@#$%^&*(),.?":{}|<>]/.test(senha); // Verifica se tem pelo menos um caractere especial
+
+  // Retorna true se todos os critérios forem atendidos
+  return temNumero && temMaiuscula && temMinuscula && temEspecial;
+}
+</script>
 </head>
 <body>
 
@@ -29,7 +46,7 @@ include("valida.php");
     <div style="   background-color: #ddd; min-height: 400px; width: 600px; float:left">
         <h2>Manutenção de usuários</h2>
         <h3>Criar novo usuário</h3>
-        <form method="post" action="inserirUsuario.php">
+        <form method="post" action="inserirUsuario.php" onsubmit="return validarSenha()">
            CPF: <input type="text" name="cpf" id="cpf"><br>
            NOME: <input type="text" name="nome" id="nome"><br>
            SENHA: <input type="password" name="senha" id="senha">
