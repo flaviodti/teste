@@ -40,9 +40,13 @@
       }
 
       function validarFormulario(event) {
+       
 
         const cpf = document.forms["loginForm"]["cpf"].value;
         const senha = document.forms["loginForm"]["senha"].value;
+
+        //const cpf = document.getElementById("cpf").value;
+        //const senha = document.getElementById("senha").value;
 
 
         // Validação do CPF
@@ -61,16 +65,11 @@
 
         return true; // Se estiver tudo ok, permite o envio do formulário
       }
-
-      function validar(event){
-        return true;
-      }
-
     </script>
   </head>
   <body>
 
-    <form name="loginForm" method="post" action="login.php" onsubmit="return validar(event)">
+    <form name="loginForm" method="post" action="login.php" onsubmit="return validarFormulario(event)">
       CPF:<input type="text" name="cpf" id="cpf"><br>
       SENHA: <input type="password" name="senha" id="senha"><br>
       <input type="submit" value="Enviar">
