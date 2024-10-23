@@ -2,6 +2,7 @@
   <title>titulo</title>
   <head>
   <script>
+ 
       function validarCPF(cpf) {
         // Remove caracteres que não são números
         cpf = cpf.replace(/\D/g, '');
@@ -74,6 +75,8 @@
       SENHA: <input type="password" name="senha" id="senha"><br>
       <input type="submit" value="Enviar">
     </form>
-
+<script>
+     document.getElementById("cpf").focus();
+     </script>
   </body>
 </html>
