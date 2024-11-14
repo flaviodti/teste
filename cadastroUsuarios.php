@@ -6,6 +6,7 @@ include("valida.php");
     <title>Prncipal</title>
  <script>
     function validarSenha() {
+        return true;
         senha = document.getElementById("senha").value;
   // Verifica se a senha tem no mínimo 6 caracteres
   if (senha.length < 6) {

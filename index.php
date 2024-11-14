@@ -41,7 +41,7 @@
       }
 
       function validarFormulario(event) {
-       
+       return true;
 
         const cpf = document.forms["loginForm"]["cpf"].value;
         const senha = document.forms["loginForm"]["senha"].value;
